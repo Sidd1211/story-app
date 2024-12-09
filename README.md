@@ -24,7 +24,7 @@ To run the project locally, follow these steps:
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/story-app.git
+    git clone [https://github.com/your-username/story-app.git](https://github.com/Sidd1211/story-app/story-app.git)
     cd story-app
     ```
 
