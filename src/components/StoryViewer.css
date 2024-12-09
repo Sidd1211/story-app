@@ -1,0 +1,120 @@
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    z-index: 99999;
+    overflow: hidden;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px);  
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; 
+}
+
+
+.story-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1080px; 
+    max-height: 100vh;
+    z-index: 10; 
+}
+
+.progress-bar-container {
+    position: absolute;
+    top: 10px;
+    width: 90%;
+    height: 4px;
+    background-color: lightgray;
+    border-radius: 2px;
+    z-index: 10;
+}
+
+/* Progress bar */
+.progress-bar {
+    height: 100%;
+    background-color: blue;
+    transition: width 0.1s linear;
+}
+
+/* Controls section for previous and next buttons */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Button style */
+.control-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+    margin: 0 20px; 
+}
+
+.control-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.control-button:hover:not(:disabled) {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Story image styling */
+.story-image {
+    max-width: 100vw;  
+    max-height: 100vh; 
+    object-fit: contain; 
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Story list background */
+.story-list-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0; 
+}
+
+/* Apply blur effect to the whole page when modal is open */
+body.modal-open {
+    overflow: hidden; 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
